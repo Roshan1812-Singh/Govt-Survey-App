@@ -45,7 +45,7 @@ const Navbar = () => {
 
       <div className="navbar">
         <a href="/dashboard">Home</a>
-        {isOtherNavs && (
+        {!isOtherNavs && (
           <>
             <a href="/policies">Policies and Guidelines</a>
             <a href="https://microdata.gov.in/NADA/Guide_to_download_microdata.pdf">Download Manual</a>
