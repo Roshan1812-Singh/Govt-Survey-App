@@ -8,7 +8,7 @@ import './Navbar.css'
 
 const Navbar = () => {
   const [showPopup, setShowPopup] = useState(false);
-  const location = useLocation();
+  // const location = useLocation();
   const navigate = useNavigate();
 
   const handleLoginClick = () => {
@@ -20,9 +20,9 @@ const Navbar = () => {
     navigate("/");
   };
 
-  const compulsoryNavs = ['/' , '/dashboard']
+  // const compulsoryNavs = ['/' , '/dashboard']
 
-  const isOtherNavs = compulsoryNavs.includes(location.pathname);
+  // const isCompulsoryNavs = compulsoryNavs.includes(location.pathname);
 
   return (
     <div className="container">
@@ -45,13 +45,13 @@ const Navbar = () => {
 
       <div className="navbar">
         <a href="/dashboard">Home</a>
-        {!isOtherNavs && (
-          <>
+        {/* {isCompulsoryNavs && ( */}
+          {/* <> */}
             <a href="/policies">Policies and Guidelines</a>
             <a href="https://microdata.gov.in/NADA/Guide_to_download_microdata.pdf">Download Manual</a>
             <a href="/contact">Contact Us</a>
-          </>
-        )}
+          {/* </> */}
+        {/* )} */}
         
         <button className="login-btn" onClick={handleLoginClick}>
           <VscAccount style={{ marginRight: "5px" }} /> Login ▾
