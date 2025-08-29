@@ -23,7 +23,7 @@ function Login() {
 
   return (
     <div className="form-container">
-      <h2 style={{ display: "flex", justifyContent: "start" }}>Log in</h2>
+      <h2>Log in</h2>
       <form onSubmit={handleLogin}>
         <input
           type="email"
@@ -39,10 +39,14 @@ function Login() {
         />
 
         <div className="captcha-box">
-          <p className="captcha-text">{captcha}</p>
-          <button type="button" onClick={() => setCaptcha(generateCaptcha())}>
-            ↻
-          </button>
+          <div className="captcha-creation">
+            <p className="captcha-text">{captcha}</p>
+          </div>
+          <div className="reload">
+            <button type="button" onClick={() => setCaptcha(generateCaptcha())}>
+              ↻
+            </button>
+          </div>
         </div>
         <input
           placeholder="Type the text in the box"
@@ -53,10 +57,10 @@ function Login() {
         <button type="submit">Login</button>
         <p style={{ display: "flex", justifyContent: "space-between" }}>
           <Link to="/register">Register</Link>
-          <Link to="#">Forgot password</Link>
+          <Link to="/forgot">Forgot password</Link>
         </p>
-        <p style={{display: "flex", justifyContent: "center", alignContent: "center", color: "violet"}}>
-             Information you provide by registering or login to our catalog will be used in compliance with the terms of the NSO's Privacy Policy.
+        <p style={{ display: "flex", justifyContent: "center", alignContent: "center", color: "#7a7c7d" }}>
+          Information you provide by registering or login to our catalog will be used in compliance with the terms of the NSO's Privacy Policy.
         </p>
       </form>
     </div>
